@@ -1,5 +1,5 @@
 {
-  "name": "Metric-Converter",
+  "name": "metric-converter",
   "integrations": {
     "capacitor": {}
   },

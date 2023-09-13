@@ -1,0 +1,41 @@
+<ion-content>
+  <ion-item>
+    <ion-label>Pilih Metrik</ion-label>
+    <ion-select [(ngModel)]="selectedMetric">
+      <ion-select-option *ngFor="let metric of metrics" [value]="metric" label-placement="floating">{{ metric
+        }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <p style="padding-left: 2%;">Dari: </p>
+  <ion-item>
+    <ion-label>--Pilih Satuan</ion-label>
+    <ion-select [(ngModel)]="selectedUnitFrom">
+      <ion-select-option *ngFor="let unit of units[selectedMetric]" [value]="unit">{{ unit }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <p style="padding-left: 2%;">Ke: </p>
+  <ion-item>
+    <ion-label>--Pilih Satuan</ion-label>
+    <ion-select [(ngModel)]="selectedUnitTo">
+      <ion-select-option *ngFor="let unit of units[selectedMetric]" [value]="unit">{{ unit }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Input Nilai </ion-label>
+    <ion-input [(ngModel)]="valueToConvert" type="number"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="convert()">Convert</ion-button>
+
+  <ion-card *ngIf="valueToConvert">
+    <ion-card-header>
+      Hasil
+    </ion-card-header>
+    <ion-card-content>
+      <ion-note>{{ valueToConvert }} {{ selectedUnitFrom }} = {{ result }} {{ selectedUnitTo }}</ion-note>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,34 @@
+/* Dropdown styling */
+ion-item {
+    --min-height: 50px; /* Tinggi minimum item */
+  }
+
+  ion-label {
+    font-weight: bold; /* Teks label yang tebal */
+    color: #333; /* Warna teks */
+  }
+  
+  ion-select {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #ccc; /* Garis pinggiran */
+    border-radius: 5px; /* Sudut melengkung */
+    padding: 2px;
+    background-color: #F1F0E8; /* Warna latar belakang dropdown */
+    color: #333; /* Warna teks */
+  }
+  
+  /* Button styling */
+  ion-button {
+    margin-top: 10px; /* Jarak atas dari tombol */
+    --background: #337CCF; /* Warna tombol */
+    padding: 1%;
+    --color: #fff; /* Warna teks tombol */
+  }
+  
+  /* Result styling */
+  ion-item.result {
+    --min-height: 50px; /* Tinggi minimum item hasil */
+    font-weight: bold; /* Teks hasil yang tebal */
+    color: #fff; /* Warna teks */
+  }
